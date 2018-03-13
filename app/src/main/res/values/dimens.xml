@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--padding/margin values-->
+    <dimen name="card_radius">5dp</dimen>
+    <dimen name="padding_order">10dp</dimen>
+    <dimen name="default_padding">15dp</dimen>
+    <dimen name="small_padding">5dp</dimen>
+    <dimen name="top_padding">7dp</dimen>
+    <dimen name="top_margin_button">30dp</dimen>
+
+    <!--fonts size-->
+    <dimen name="x_small_text_size">10sp</dimen>
+    <dimen name="little_text_size">12sp</dimen>
+    <dimen name="small_text_size">13sp</dimen>
+    <dimen name="default_text_size">14sp</dimen>
+    <dimen name="big_text_size">16sp</dimen>
+    <dimen name="x_big_text_size">18sp</dimen>
+    <dimen name="xx_big_text_size">20sp</dimen>
+    <dimen name="xx_big_text_size2">25sp</dimen>
+    <dimen name="xxl_big_text_size">32sp</dimen>
+    <dimen name="mega_big_text_size">64sp</dimen>
+
+</resources>

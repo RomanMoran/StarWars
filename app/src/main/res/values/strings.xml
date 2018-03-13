@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Star Wars</string>
+
+    <string name="go_exit">Press again to exit</string>
+    <string name="wait_loading">Wait&#8230;</string>
+    <string name="network_disable_error">No internet connection</string>
+
+    <!-- bottom sheet fragment -->
+    <string name="starships">starships</string>
+    <string name="films">films</string>
+    <string name="vehicles">vehicles</string>
+    <string name="open_in_browser">Open in Browser</string>
+    <string name="site_is_not_exist">Site isn\'t exist</string>
+    <string name="something_went_wrong">Something went wrong</string>
+
+</resources>

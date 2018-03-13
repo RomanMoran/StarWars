@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="windowBackground">#000000</color>
+    <color name="red">#F22121</color>
+
+    <!-- Main Screen -->
+    <color name="mainBackgroundColor">#D8D8D8</color>
+    <color name="grayTextColor">#7D7D7D</color>
+    <color name="male">#0059FF</color>
+    <color name="female">#E9008A</color>
+    <color name="black">#000000</color>
+
+
+
+
+</resources>
