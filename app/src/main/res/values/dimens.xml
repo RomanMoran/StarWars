@@ -19,6 +19,5 @@
     <dimen name="xx_big_text_size">20sp</dimen>
     <dimen name="xx_big_text_size2">25sp</dimen>
     <dimen name="xxl_big_text_size">32sp</dimen>
-    <dimen name="mega_big_text_size">64sp</dimen>
 
 </resources>

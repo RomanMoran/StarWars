@@ -10,7 +10,7 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_order"
+        android:layout_marginLeft="@dimen/default_padding"
         android:textColor="@color/black"
         android:textSize="@dimen/xx_big_text_size2"
         app:layout_constraintBottom_toBottomOf="@id/close"
@@ -30,7 +30,7 @@
         android:id="@+id/characterInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_order"
+        android:layout_marginLeft="@dimen/default_padding"
         android:layout_marginTop="@dimen/small_padding"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/name">
