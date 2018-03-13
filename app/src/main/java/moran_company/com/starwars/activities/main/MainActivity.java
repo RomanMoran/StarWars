@@ -9,7 +9,7 @@ import butterknife.BindView;
 import moran_company.com.starwars.R;
 import moran_company.com.starwars.activities.base.BaseMvpActivity;
 import moran_company.com.starwars.adapter.CharactersAdapter;
-import moran_company.com.starwars.data.Result;
+import moran_company.com.starwars.data.Character;
 
 public class MainActivity extends BaseMvpActivity<MainMvp.Presenter> implements MainMvp.View {
 
@@ -28,8 +28,8 @@ public class MainActivity extends BaseMvpActivity<MainMvp.Presenter> implements 
         super.onCreate(savedInstanceState);
         characters.setAdapter(charactersAdapter);
         mPresenter.loadPeople();
-        charactersAdapter.setOnItemClickListner(result -> {
-            showBottomSheetDialog(result);
+        charactersAdapter.setOnItemClickListner(character -> {
+            showBottomSheetDialog(character);
         });
     }
 
@@ -40,7 +40,7 @@ public class MainActivity extends BaseMvpActivity<MainMvp.Presenter> implements 
 
 
     @Override
-    public void showPeople(List<Result> people) {
+    public void showPeople(List<Character> people) {
         charactersAdapter.setItems(people);
     }
 }

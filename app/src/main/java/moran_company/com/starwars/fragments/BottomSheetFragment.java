@@ -25,7 +25,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import moran_company.com.starwars.R;
-import moran_company.com.starwars.data.Result;
+import moran_company.com.starwars.data.Character;
 import moran_company.com.starwars.utility.Utility;
 
 @FragmentWithArgs
@@ -34,7 +34,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
     public static final String TAG = BottomSheetFragment.class.getName();
 
     @Arg(bundler = ParcelerArgsBundler.class)
-    Result result;
+    Character character;
 
     @BindView(R.id.name)
     TextView name;
@@ -57,8 +57,8 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
         // Required empty public constructor
     }
 
-    public static BottomSheetFragment newInstance(Result result) {
-        return new BottomSheetFragmentBuilder(result).build();
+    public static BottomSheetFragment newInstance(Character character) {
+        return new BottomSheetFragmentBuilder(character).build();
     }
 
     @Override
@@ -82,14 +82,14 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
     }
 
     private void fillFields() {
-        name.setText(result.getName());
-        height.setText(result.getHeight());
-        mass.setText(result.getMass());
-        gender.setText(result.getGender());
+        name.setText(character.getName());
+        height.setText(character.getHeight());
+        mass.setText(character.getMass());
+        gender.setText(character.getGender());
 
-        int starshipsSize = result.getStarships() == null ? 0 : result.getStarships().size();
-        int filmsSize = result.getFilms() == null ? 0 : result.getFilms().size();
-        int vehiclesSize = result.getVehicles() == null ? 0 : result.getVehicles().size();
+        int starshipsSize = character.getStarships() == null ? 0 : character.getStarships().size();
+        int filmsSize = character.getFilms() == null ? 0 : character.getFilms().size();
+        int vehiclesSize = character.getVehicles() == null ? 0 : character.getVehicles().size();
 
         starshipsCount.setText(Integer.toString(starshipsSize));
         filmsCount.setText(Integer.toString(filmsSize));
@@ -105,8 +105,8 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
 
     @OnClick(R.id.openBrowser)
     void openUrl(){
-        if (!TextUtils.isEmpty(result.getUrl())) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(result.getUrl()));
+        if (!TextUtils.isEmpty(character.getUrl())) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(character.getUrl()));
             startActivity(intent);
         }else
             Utility.showToast(getContext(),R.string.site_is_not_exist);

@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 @Parcel(value = Parcel.Serialization.BEAN)
-public class Result {
+public class Character {
 
     @SerializedName("name")
     @Expose

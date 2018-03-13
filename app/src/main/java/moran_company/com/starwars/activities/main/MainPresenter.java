@@ -17,7 +17,8 @@ public class MainPresenter extends BasePresenterImpl<MainMvp.View> implements Ma
         getApiClient()
                 .getCharacters()
                 .subscribe(example -> {
-                    mView.showPeople(example.getResults());
-                },this::onError,this::onComplete);
+                    if (isExistsView())
+                        mView.showPeople(example.getCharacters());
+                }, this::onError, this::onComplete);
     }
 }

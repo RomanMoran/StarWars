@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -27,7 +26,7 @@ import butterknife.ButterKnife;
 import moran_company.com.starwars.R;
 import moran_company.com.starwars.StarwarsApplication;
 import moran_company.com.starwars.base_mvp.BaseMvp;
-import moran_company.com.starwars.data.Result;
+import moran_company.com.starwars.data.Character;
 import moran_company.com.starwars.fragments.BottomSheetFragment;
 import moran_company.com.starwars.utility.DialogUtility;
 import moran_company.com.starwars.utility.Utility;
@@ -100,8 +99,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseMvp.
         getCurrentFragmentManager();
     }
 
-    public void showBottomSheetDialog(Result result){
-        BottomSheetFragment bottomSheetFragment = BottomSheetFragment.newInstance(result);
+    public void showBottomSheetDialog(Character character){
+        BottomSheetFragment bottomSheetFragment = BottomSheetFragment.newInstance(character);
         bottomSheetFragment.show(getCurrentFragmentManager(),BottomSheetFragment.TAG);
     }
 

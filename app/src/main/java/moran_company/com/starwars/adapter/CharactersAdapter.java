@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import moran_company.com.starwars.GlideApp;
 import moran_company.com.starwars.R;
-import moran_company.com.starwars.data.Result;
+import moran_company.com.starwars.data.Character;
 
 /**
  * Created by roman on 12.03.2018.
@@ -21,20 +21,12 @@ import moran_company.com.starwars.data.Result;
 
 public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.ViewHolder> {
 
-    private List<Result> items;
+    private List<Character> items;
 
     public CharactersAdapter() {
     }
 
-    public CharactersAdapter(List<Result> items) {
-        this.items = items;
-    }
-
-    public List<Result> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Result> items) {
+    public void setItems(List<Character> items) {
         this.items = items;
         notifyDataSetChanged();
     }
@@ -42,7 +34,7 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Vi
     private OnItemClickListener onItemClickListener;
 
     public interface OnItemClickListener {
-        void onClick(Result result);
+        void onClick(Character character);
     }
 
     public void setOnItemClickListner(OnItemClickListener onItemClickListner) {
@@ -58,8 +50,8 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Result result = items.get(position);
-        holder.bind(result);
+        Character character = items.get(position);
+        holder.bind(character);
     }
 
     @Override
@@ -79,17 +71,17 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Vi
             super(itemView);
             ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(view -> {
-                Result result = items.get(getAdapterPosition());
-                if (result != null)
+                Character character = items.get(getAdapterPosition());
+                if (character != null)
                     onItemClickListener.onClick(items.get(getAdapterPosition()));
             });
         }
 
-        public void bind(Result result) {
-            character.setText(result.getName());
-            birthYear.setText(result.getBirthYear());
+        public void bind(Character character) {
+            this.character.setText(character.getName());
+            birthYear.setText(character.getBirthYear());
             GlideApp.with(itemView.getContext())
-                    .load(getDrawableResource(result.getGender()))
+                    .load(getDrawableResource(character.getGender()))
                     .centerCrop()
                     .into(gender);
         }

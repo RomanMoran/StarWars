@@ -18,7 +18,7 @@ public class Example {
     private Object previous;
     @SerializedName("results")
     @Expose
-    private List<Result> results = null;
+    private List<Character> characters = null;
 
     public Integer getCount() {
         return count;
@@ -44,12 +44,12 @@ public class Example {
         this.previous = previous;
     }
 
-    public List<Result> getResults() {
-        return results;
+    public List<Character> getCharacters() {
+        return characters;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+    public void setCharacters(List<Character> characters) {
+        this.characters = characters;
     }
 
 }
